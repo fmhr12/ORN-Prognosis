@@ -20,22 +20,22 @@ compute_gower_distances <- function(single_row, df_full) {
 # -----------------------
 # 1. Load Final Model
 # -----------------------
-saved_model_path <- "/Users/farazparnia/Desktop/ArticleORNJ_Pred/App Model_local2/final_fg_model.rds"
+saved_model_path <- "final_fg_model.rds"
 final_model <- readRDS(saved_model_path)
 
 # -----------------------
 # 2. Load the PRECOMPUTED final_grid_data (SHAP values)
 # -----------------------
-precomputed_path <- "/Users/farazparnia/Desktop/ArticleORNJ_Pred/App Model_local2/precomputed_shap_grid_multi_times2.rds"
+precomputed_path <- "precomputed_shap_grid_multi_times2.rds"
 final_80grid_data <- readRDS(precomputed_path)
 
 # -----------------------
 # 3. Load the PRECOMPUTED average CIF data (for reference curves)
 # -----------------------
 # Overall, ORN Positive, and ORN Negative curves
-mean_cif_data_overall <- readRDS("/Users/farazparnia/Desktop/ArticleORNJ_Pred/App Model_local2/mean_cif_data_all.rds")
-mean_cif_data_pos     <- readRDS("/Users/farazparnia/Desktop/ArticleORNJ_Pred/App Model_local2/mean_cif_data_ORN_positive.rds")
-mean_cif_data_neg     <- readRDS("/Users/farazparnia/Desktop/ArticleORNJ_Pred/App Model_local2/mean_cif_data_ORN_negative.rds")
+mean_cif_data_overall <- readRDS("mean_cif_data_all.rds")
+mean_cif_data_pos     <- readRDS("mean_cif_data_ORN_positive.rds")
+mean_cif_data_neg     <- readRDS("mean_cif_data_ORN_negative.rds")
 
 # For SHAP baseline calculation we continue to use the overall data.
 mean_cif_data <- mean_cif_data_overall
