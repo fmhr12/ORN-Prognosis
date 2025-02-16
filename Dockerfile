@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 # Install extra R packages that are not already included in the image.
-RUN R -e "install.packages(c('shinythemes', 'survival', 'riskRegression', 'ggplot2', 'prodlim', 'plotly'), repos='https://cran.rstudio.com/')"
+RUN R -e "install.packages(c('shinythemes', 'survival', 'riskRegression', 'fastshap', 'shapviz', 'ggplot2', 'prodlim', 'gower', 'plotly'), repos='https://cran.rstudio.com/')"
 
 # Copy the app files into the image.
 COPY . /app
